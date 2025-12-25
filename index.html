@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio project</title>
+  <meta name="description" content="portfolio" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">PORTFOLIO</a>
+      <nav class="nav" id="nav">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" aria-label="Toggle theme"></button>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section home-section">
+      <div class="container home-grid">
+        <div class="home-text">
+          <h1>Hello I'm <span class="accent">Jomar N. Permangil</span></h1>
+          <p class="tagline">Aspiring Web Developer | IT Student</p>
+          <p class="lead">
+            I build simple, accessible websites and like to learn new technologies.
+            Explore my projects, skills, and contact info below.
+          </p>
+          <p class="quote">“Code is like humor. When you have to explain it, it’s bad.”</p>
+          <div class="home-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="home-photo">
+          <img src="oten.jpg" alt="Jomar" />
+        </div>
+      </div>
+    </section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <h2>Gallery</h2>
+    <p class="muted">A few snapshots to know me better</p>
+
+    <div class="gallery-grid">
+      <img src="image1.jpg" alt="Gallery photo 1" />
+      <img src="image2.jpg" alt="Gallery photo 2" />
+      <img src="image3.jpg" alt="Gallery photo 3" />
+      <img src="img4.jpg" alt="Gallery photo 4" />
+      <img src="img5.jpg" alt="Gallery photo 5" />
+    </div>
+  </div>
+</section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Education</h3>
+            <p>Bachelor of Science in Information Technology in Eastern Visayas State University</p>
+          </div>
+
+          <div class="about-card">
+            <h3>Technical Interests</h3>
+            <ul>
+              <li>Frontend development (HTML/CSS/JavaScript)</li>
+              <li>Web accessibility & performance</li>
+              <li>Networking & cybersecurity basics</li>
+              <li>Ethical Hacking</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Playing Guitar</li>
+              <li>Mobile Games</li>
+              <li>Coding Sometimes</li>
+            </ul>
+             
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-block">
+            <h4>Languages & Frameworks</h4>
+            <p>HTML5, CSS3, JavaScript (ES6+), Bootstrap, React (basic)</p>
+          </div>
+
+          <div class="skill-block">
+            <h4>Tools</h4>
+            <p>Git, VSCode, Linux, Docker (basics), Chrome DevTools</p>
+          </div>
+
+          <div class="skill-block">
+            <h4>Technical Areas</h4>
+            <p>Web Development, Networking, Database concepts, Cybersecurity fundamentals</p>
+          </div>
+
+          <div class="skill-block">
+            <h4>Soft Skills</h4>
+            <p>Teamwork, Communication, Problem Solving, Time Management</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">Projects from 1st year</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <img class="project-thumb" src="download.png" alt="Project 1 thumbnail">
+            <div class="project-body">
+              <h3>Student portfolio</h3>
+              <p class="project-desc">i make a simple portfolio about my life and i submit that project to it era subject.
+                 Includes CRUD operations and responsive UI.</p>
+              <ul class="project-meta">
+                <li><strong>Role:</strong> Frontend developer & UI design</li>
+                <li><strong>Tools:</strong> HTML, CSS, JavaScript</li>
+              </ul>
+ 
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <img class="project-thumb" src="download.png" alt="Project 2 thumbnail">
+            <div class="project-body">
+              <h3>Procurement System</h3>
+              <p class="project-desc">Is all about the evsu funds.
+                  simple system.</p>
+              <ul class="project-meta">
+                <li><strong>Role:</strong> FrontEnd</li>
+                <li><strong>Tools:</strong> OOP, Tkinter , Python</li>
+              </ul>
+ 
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>Email: <a href="">jomarpermangil29@gmail.com</a></p>
+            <p>GitHub: <a href="" target="_blank" rel="noopener">https://github.com/Marjo141</a></p>
+            <p>Facebook: <a href="" target="_blank" rel="noopener">https://www.facebook.com/share/1BT6Ukvzff/</a></p>
+            <p class="muted">Or send a message using the form.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" id="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" id="email" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" id="message" rows="5" required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Send Message</button>
+            </div>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span>JomarPermangil</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

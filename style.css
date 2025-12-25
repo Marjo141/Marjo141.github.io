@@ -1,0 +1,326 @@
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#2b6cb0;
+  --card:#f8fafc;
+  --glass: rgba(255,255,255,0.6);
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(16,24,40,0.08);
+  --max-width:1100px;
+  --nav-height:64px;
+  --gap:1rem;
+  --transition:200ms ease;
+}
+
+
+[data-theme="dark"]{
+  --bg:#0b1220;
+  --text:#e6eef6;
+  --muted:#9aa9bf;
+  --accent:#79b8ff;
+  --card:#0f1724;
+  --glass: rgba(255,255,255,0.03);
+  --shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+ 
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),var(--card));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  scroll-behavior:smooth;
+}
+
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1.25rem 0;
+}
+ 
+.site-header{
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  background:var(--glass);
+  z-index:50;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  height:var(--nav-height);
+}
+.brand{
+  font-weight:700;
+  letter-spacing:0.2px;
+  text-decoration:none;
+  color:var(--text);
+}
+.nav{
+  display:flex;
+  gap:0.75rem;
+}
+.nav-link{
+  text-decoration:none;
+  color:var(--muted);
+  padding:0.4rem 0.6rem;
+  border-radius:8px;
+  transition:all var(--transition);
+}
+.nav-link:hover,
+.nav-link.active{
+  color:var(--accent);
+  background:transparent;
+}
+ 
+.mobile-menu-btn{
+  display:none;
+  background:none;
+  border:0;
+  font-size:1.25rem;
+}
+ 
+.header-controls{
+  display:flex;
+  gap:0.5rem;
+  align-items:center;
+}
+ 
+.section{
+  padding:3rem 0;
+}
+h2{
+  margin:0 0 1rem 0;
+  font-size:1.4rem;
+}
+.muted{ color:var(--muted) }
+
+/* HOME */
+.home-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1.25rem;
+  align-items:center;
+}
+.home-text h1{ font-size:1.6rem; margin:0 0 .25rem 0 }
+.tagline{ color:var(--accent); font-weight:600; margin:0 0 .5rem 0 }
+.lead{ margin:0 0 .5rem 0; color:var(--muted) }
+.quote{ font-style:italic; color:var(--muted); margin-bottom:1rem }
+
+.home-photo img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  display:block;
+  margin:0 auto;
+}
+
+/* buttons */
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  background:var(--accent);
+  color:white;
+  padding:0.5rem 0.9rem;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  transition:transform var(--transition);
+}
+.btn:hover{ transform:translateY(-2px) }
+.btn.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.btn.small{ padding:0.35rem 0.6rem; font-size:0.9rem }
+
+/* About grid */
+.about-grid{
+  display:grid;
+  gap:1rem;
+}
+.about-card{
+  background:var(--card);
+  padding:1rem;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* Skills grid */
+.skills-grid{
+  display:grid;
+  gap:1rem;
+}
+.skill-block{
+  background:var(--card);
+  padding:0.9rem;
+  border-radius:10px;
+  box-shadow:var(--shadow);
+}
+
+/* Projects */
+.projects-grid{
+  display:grid;
+  gap:1rem;
+}
+.project-card{
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap:1rem;
+  background:var(--card);
+  padding:0.75rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.project-thumb{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* Contact */
+.contact-grid{
+  display:grid;
+  gap:1rem;
+}
+.contact-info{
+  background:var(--card);
+  padding:0.9rem;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.contact-form label{
+  display:block;
+  margin-bottom:0.6rem;
+  font-size:0.95rem;
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:0.6rem;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+  background:transparent;
+  color:var(--text);
+  margin-top:0.25rem;
+}
+.form-actions{ margin-top:0.5rem }
+.form-status{ margin-top:0.6rem; color:var(--muted) }
+
+/* Footer */
+.site-footer{
+  padding:1.5rem 0;
+  text-align:center;
+  color:var(--muted);
+}
+.home-photo {
+  position: relative;
+  width: 280px; /* adjust size */
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.home-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  display: block;
+}
+.home-photo img {
+  max-width: 280px;   /* limit width */
+  width: 100%;        /* responsive scaling */
+  height: auto;       /* keep aspect ratio */
+  border-radius: 8px; /* optional rounded corners */
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;       /* fixed height for consistency */
+  object-fit: cover;   /* crop nicely without distortion */
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+.home-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Second image stacked on top */
+.home-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("gwapo.jpg") center/cover no-repeat;  
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* On hover, fade in second image */
+.home-photo:hover::after {
+  opacity: 1;
+}
+
+:root {
+  --icon-color: #222; /* default for light mode */
+}
+
+[data-theme="dark"] {
+  --icon-color: #f5f5f5; /* bright icon for dark background */
+}
+#theme-toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--icon-color);
+  background: transparent;
+  border: none;
+}
+ 
+@media(min-width:700px){
+  .home-grid{ grid-template-columns: 1fr 340px }
+  .about-grid{ grid-template-columns: repeat(3, 1fr) }
+  .skills-grid{ grid-template-columns: repeat(2, 1fr) }
+  .projects-grid{ grid-template-columns: 1fr; }
+  .contact-grid{ grid-template-columns: 1fr 1fr }
+  .mobile-menu-btn{ display:none }
+  .nav{ display:flex }
+}
+
+/* Desktop */
+@media(min-width:980px){
+  .projects-grid{ grid-template-columns: repeat(2, 1fr) }
+  .nav-link{ padding:0.45rem 0.8rem }
+  .mobile-menu-btn{ display:none }
+}
+
+/* Small screens adjustments */
+@media(max-width:699px){
+  .nav{ display:none } 
+  .mobile-menu-btn{ display:inline-block }
+  .header-controls{ gap:0.25rem }
+  .project-card{ grid-template-columns: 1fr }
+}
